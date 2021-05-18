@@ -1,12 +1,21 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import Load from '../../components/Load/load';
+import Quote from '../../components/Quote/quote';
+import { getQuote } from '../../services/simpsonsApi';
 
-export default class simpsonsQuote extends Component {
-    render() {
+const SimpsonsQuote = () => {
+        const [quote, setQuote] = useState({character:'', image:'', quote:''});
+
+        const handleClick = async () => {
+            const quote = await getQuote();
+            setQuote(quote);
+        };
+    
         return (
             <div>
-                
+                <Load onClick={handleClick}/>
+                <Quote {...quote}/>
             </div>
-        )
-    }
-}
-
+        );
+    };
+    export default SimpsonsQuote

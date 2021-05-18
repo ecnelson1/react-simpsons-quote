@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Load from '../../components/Load/load';
+import Load from '../../components/Load/Load';
 import Quote from '../../components/Quote/quote';
 import { getQuote } from '../../services/simpsonsApi';
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Load from '../../components/Load/Load';
-import Quote from '../../components/Quote/quote';
+import Quote from '../../components/Quote/Quote';
 import { getQuote } from '../../services/simpsonsApi';
 
 const SimpsonsQuote = () => {
